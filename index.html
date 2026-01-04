@@ -4,27 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Mock | Compete Like It’s the Real Exam</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
     <nav class="navbar1">
-        <div class="logo">
-            <a class="logo-links" href="#">
-                <div class="logo-box">M</div>
-                <span class="logo-text">Mockly</span>
-            </a>
-        </div>
-        <div class="ul-links">
-            <a href="index.html">Home</a>
-            <a href="">Explore</a>
-            <a href="mocktest.html">Mock Tests</a>
-            <a href="pricing.html">Pricing</a>
-        </div>
-        <a href="signin.html" class="signin">
-            <button class="sign-btn">Sign in</button>
+    <div class="logo">
+        <a class="logo-links" href="#">
+            <div class="logo-box">M</div>
+            <span class="logo-text">Mockly</span>
         </a>
-    </nav>
+    </div>
+
+    <!-- DESKTOP LINKS -->
+    <div class="ul-links">
+        <a href="index.html">Home</a>
+        <a href="">Explore</a>
+        <a href="mocktest.html">Mock Tests</a>
+        <a href="pricing.html">Pricing</a>
+    </div>
+
+    <a href="signin.html" class="signin desktop-signin">
+        <button class="sign-btn">Sign in</button>
+    </a>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="">Explore</a>
+    <a href="mocktest.html">Mock Tests</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="signin.html" class="mobile-signin">Sign in</a>
+</div>
+
 
     <main class="hero-section">
         <div class="badge-alert">
@@ -284,5 +304,14 @@
             </div>
         </div>
     </footer>
+    <script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+});
+</script>
+
 </body>
 </html>
